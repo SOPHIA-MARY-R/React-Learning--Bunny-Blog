@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    //JSX code -> allows HTML style in JS
+    //as class is a reserved in JS, class keyword is not used below
+    //instead, className is used, which will be converted to 'class' in HTML
+    //inspect and see the page to notice the change
+    <div className='App'>
+      <div className='content'>
+        <h1> App component </h1>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App; //always export the component to use it in other files

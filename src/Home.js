@@ -5,7 +5,7 @@ const Home = () => {
     }
     return (
         <div className="home">
-            <p>{ name }</p>
+            <p>Hello { name }!</p>
             <button onClick={handleClick}>Button</button>
         </div>
     );

@@ -31,3 +31,26 @@
   margin: 40px auto;
   padding: 20px;
 }
+.blog-preview{
+  padding: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin: 10px;
+}
+.blog-preview:hover{
+  background-color: aliceblue;
+}
+.blog-id{
+  padding: 8px 15px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 300px;
+}
+.blog-topic{
+  color: dodgerblue;
+  margin-top: 10px;
+}
+.blog-view{
+  display:contents;
+  cursor: pointer;
+}

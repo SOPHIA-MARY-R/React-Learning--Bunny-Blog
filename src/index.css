@@ -33,18 +33,19 @@
 }
 .blog-preview{
   padding: 15px;
-  border: 1px solid lightgrey;
+  /* border: 0.5px solid lightgrey; */
   border-radius: 10px;
   margin: 10px;
 }
 .blog-preview:hover{
-  background-color: aliceblue;
+  background-color:aliceblue;
+  border: none;
 }
 .blog-id{
-  padding: 8px 15px;
+  padding: 4px 10px;
   background-color: dodgerblue;
   color: white;
-  border-radius: 300px;
+  border-radius: 5px;
 }
 .blog-topic{
   color: dodgerblue;

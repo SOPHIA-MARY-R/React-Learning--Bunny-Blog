@@ -69,6 +69,7 @@
 }
 .view-btn i, .delete-btn i{
   font-size: large;
+  color: grey;
 }
 .view-btn i:hover{
   color: dodgerblue;

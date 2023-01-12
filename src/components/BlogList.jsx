@@ -1,7 +1,5 @@
 export default function BlogList(props){
-    // const blogs=props.blogs;
-    // const title=props.title;
-    // or export default function BlogList({blogs, title})
+    // or export default function BlogList({blogs, title, handleDelete})
     return(
         <div className="blog-list">
             <h2>{props.title}</h2>
@@ -11,7 +9,10 @@ export default function BlogList(props){
                     <h2 className="blog-topic">{blog.topic}</h2>
                     <h4>Written by {blog.author}</h4>
                     <p>{blog.body}</p>
-                    <button className="blog-view"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                    <div className="button-container">
+                        <div className="blog-view"><button className='view-btn'><i class="fa fa-eye"/></button></div>
+                        <div className="blog-delete"><button onClick={()=>props.handleDelete(blog.id)} className='delete-btn'><i class="fa fa-trash-can"/></button></div>
+                    </div>
                 </div>
             ))}
         </div>

@@ -38,7 +38,7 @@
   border-left: 3px solid aliceblue;
   border-bottom: 5px solid aliceblue;
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px 0px;
 }
 .blog-preview:hover{
   background-color:aliceblue;
@@ -53,7 +53,28 @@
   color: dodgerblue;
   margin-top: 10px;
 }
-.blog-view{
-  display:contents;
+.button-container{
+  padding: 5px;
+  /* border: 1px solid black; */
+  display:flow-root;
+}
+.blog-view, .blog-delete{
+  float: right;
+  
+}
+.view-btn, .delete-btn{
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+}
+.view-btn i, .delete-btn i{
+  font-size: large;
+}
+.view-btn i:hover{
+  color: dodgerblue;
+  font-size: larger;
+}
+.delete-btn i:hover{
+  color: red;
+  font-size: larger;
 }

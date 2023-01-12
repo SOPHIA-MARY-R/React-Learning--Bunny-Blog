@@ -13,8 +13,7 @@ export default function Home(){
     }
     useEffect(()=>{
         console.log('use effect fired')
-        // useEffect fires whenever there is a rerender
-    })
+    }, []) //==> only fires at the initial render
     return (
         <div className="home">
             <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete}/>

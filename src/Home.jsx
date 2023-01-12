@@ -13,7 +13,7 @@ export default function Home(){
     }
     useEffect(()=>{
         console.log('use effect fired')
-    }, []) //==> only fires at the initial render
+    }, [blogs]) //dependency array ==> [dependency_name], so useEffect is fired whenever there is a change in blogs
     return (
         <div className="home">
             <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete}/>

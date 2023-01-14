@@ -1,7 +1,20 @@
 # Bunny Blog
 This is a simple site to read, write and delete blogs. It is implemented using React. This is a part of my React learning journey, which I learnt from a youtube channel [The Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d). I thank the tutor for his marvelous teaching. 
 
+## To run the JSON server
+Type the following command and visit [http://localhost:8000/blogs/](http://localhost:8000/blogs/)
+```
+npx json-server -- watch data/db.json --port 8000
+```
 
+## End points:
+```
+http://localhost:8000//blogs             GET         Fetch all blogs
+http://localhost:8000//blogs/{id}        GET         Fetch single blog
+http://localhost:8000//blogs             POST        Add a new blog
+http://localhost:8000//blogs/{id}        DELETE      Delete a blog
+```
+ 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

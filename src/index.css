@@ -43,6 +43,14 @@
 .blog-preview:hover{
   background-color:aliceblue;
 }
+.blog-content{
+  border-top:1px solid aliceblue;
+  border-right:1px solid aliceblue;
+  border-left: 3px solid aliceblue;
+  border-bottom: 5px solid aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+}
 .blog-id{
   padding: 4px 10px;
   background-color: dodgerblue;
@@ -52,6 +60,14 @@
 .blog-topic{
   color: dodgerblue;
   margin-top: 10px;
+}
+.blog-author{
+  font-style: italic;
+}
+hr{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 2px solid dodgerblue;
 }
 .blog-body{
   text-align: justify;
@@ -63,7 +79,6 @@
 }
 .blog-view, .blog-delete{
   float: right;
-  
 }
 .view-btn, .delete-btn{
   border: none;
@@ -71,7 +86,6 @@
   cursor: pointer;
 }
 .view-btn i, .delete-btn i{
-  font-size: large;
   color: grey;
 }
 .view-btn i:hover{

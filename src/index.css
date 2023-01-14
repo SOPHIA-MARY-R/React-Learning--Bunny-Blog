@@ -8,7 +8,6 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -27,10 +26,11 @@
   color:dodgerblue;
 }
 .content {
-  max-width: 600px;
-  margin: 40px auto;
+  margin: 50px;
   padding: 20px;
 }
+
+/* blog list & blog details */
 .blog-preview{
   padding: 15px;
   border-top:1px solid aliceblue;
@@ -39,6 +39,8 @@
   border-bottom: 5px solid aliceblue;
   border-radius: 10px;
   margin: 10px 0px;
+  width: 400px;
+  align-items: center;
 }
 .blog-preview:hover{
   background-color:aliceblue;
@@ -95,4 +97,44 @@ hr{
 .delete-btn i:hover{
   color: red;
   font-size: larger;
+}
+
+/* create blog */
+.blog-form{
+  display: flex;
+  flex-direction: column;
+}
+input, select, textarea{
+  margin: 8px 10px 20px 0px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: aliceblue;
+  width: auto;
+  overflow: hidden;
+}
+input:focus, select:focus, textarea:focus{
+  outline: none;
+}
+.add-blog{
+  border: none;
+  padding: 16px 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  background-color: dodgerblue;
+  font-size: medium;
+}
+
+.blog-container{
+  display: flow-root;
+}
+.blog-edit{
+  float: left;
+  width: 500px;
+}
+.preview{
+  float: right;
+  width: 500px;
+  overflow-wrap: break-word;
 }

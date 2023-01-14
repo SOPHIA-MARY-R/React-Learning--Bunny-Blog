@@ -8,10 +8,10 @@ export default function BlogList(props){
                     <span className="blog-id">{blog.id}</span>
                     <h2 className="blog-topic">{blog.topic}</h2>
                     <h4>Written by {blog.author}</h4>
-                    <p>{blog.body}</p>
+                    {/* <p className="blog-body">{blog.body}</p> */}
                     <div className="button-container">
                         <div className="blog-view"><button className='view-btn'><i class="fa fa-eye"/></button></div>
-                        <div className="blog-delete"><button onClick={()=>props.handleDelete(blog.id)} className='delete-btn'><i class="fa fa-trash-can"/></button></div>
+                        <div className="blog-delete"><button className='delete-btn'><i class="fa fa-trash-can"/></button></div>
                     </div>
                 </div>
             ))}

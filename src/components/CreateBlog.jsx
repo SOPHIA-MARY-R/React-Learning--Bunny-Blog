@@ -9,6 +9,7 @@ export default function CreateBlog(){
     const handleSubmit = (e) => {
         e.preventDefault();
         //prevent the page from reload on submit
+        
         const blog = {topic, body, author};
         setIsLoading(true);
         fetch('http://localhost:8000/blogs', {
@@ -16,7 +17,6 @@ export default function CreateBlog(){
             headers: {"Content-type" : "application/json"},
             body: JSON.stringify(blog)
         }).then(()=>{
-            console.log('new blog added')
             setIsLoading(false);
         })
     }

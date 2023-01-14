@@ -11,7 +11,6 @@ export default function BlogList({blogs, title}){
                     <p className="blog-author">Written by {blog.author}</p>
                     <div className="button-container">
                         <div className="blog-view"><Link to={`/blogs/${blog.id}`}><button className='view-btn'><i class="fa fa-eye"/></button></Link></div>
-                        <div className="blog-delete"><button className='delete-btn'><i class="fa fa-trash-can"/></button></div>
                     </div>
                 </div>
             ))}

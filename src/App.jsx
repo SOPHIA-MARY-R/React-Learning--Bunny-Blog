@@ -1,7 +1,7 @@
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import Home from './Home';
 
-function App() {
+export default function App() {
   return (
     <div className='App'>
       <Navbar />
@@ -11,5 +11,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

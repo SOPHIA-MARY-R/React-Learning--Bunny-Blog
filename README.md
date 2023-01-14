@@ -1,3 +1,7 @@
+# Bunny Blog
+This is a simple site to read, write and delete blogs. It is implemented using React. This is a part of my React learning journey, which I learnt from a youtube channel [The Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d). I thank the tutor for his marvelous teaching. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,5 +1,5 @@
 export default function BlogList(props){
-    // or export default function BlogList({blogs, title, handleDelete})
+    // or export default function BlogList({blogs, title})
     return(
         <div className="blog-list">
             <h2>{props.title}</h2>

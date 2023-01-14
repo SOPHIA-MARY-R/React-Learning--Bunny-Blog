@@ -12,7 +12,7 @@ export default function useFetch(url){
         setTimeout(()=>{
             fetch(url)
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 if(!res.ok){ //if response object status is not ok, throw an exception
                     throw Error('Oops! Could not fetch data from that resource. Please check if the resource exists.');
                     //for example, trying to fetch from 'http://localhost:8000/blogss' which does not exist

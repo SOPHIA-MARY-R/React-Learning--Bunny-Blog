@@ -5,12 +5,19 @@ export default function CreateBlog(){
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('sophia');
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        //prevent the page from reload on submit
+        const blog = {title, body, author};
+        console.log(blog);
+    }
+
     return(
         <div className="blog-container">
             <h2>Create Blogs here ...</h2>
             <br/>
             <div className="blog-edit">
-                <form className="blog-form">
+                <form className="blog-form" onSubmit={handleSubmit}>
                     <label>Blog Title </label>
                     <input 
                         type="text" 

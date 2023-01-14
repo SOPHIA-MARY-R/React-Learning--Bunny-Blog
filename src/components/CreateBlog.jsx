@@ -1,15 +1,24 @@
 import { useState } from "react";
 
 export default function CreateBlog(){
-    const [title, setTitle] = useState('');
+    const [topic, setTopic] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('sophia');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         //prevent the page from reload on submit
-        const blog = {title, body, author};
-        console.log(blog);
+        const blog = {topic, body, author};
+        setIsLoading(true);
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: {"Content-type" : "application/json"},
+            body: JSON.stringify(blog)
+        }).then(()=>{
+            console.log('new blog added')
+            setIsLoading(false);
+        })
     }
 
     return(
@@ -18,12 +27,12 @@ export default function CreateBlog(){
             <br/>
             <div className="blog-edit">
                 <form className="blog-form" onSubmit={handleSubmit}>
-                    <label>Blog Title </label>
+                    <label>Blog Topic </label>
                     <input 
                         type="text" 
-                        value={title} 
+                        value={topic} 
                         required
-                        onChange={(event)=>setTitle(event.target.value)}
+                        onChange={(event)=>setTopic(event.target.value)}
                     />
 
                     <label>Blog Author </label>
@@ -42,12 +51,12 @@ export default function CreateBlog(){
                         value={body}
                         onChange={(event)=>setBody(event.target.value)}
                     />
-                    <button className="add-blog">Add</button>
+                    { !isLoading ? <button className="add-blog">Add</button> : <button className="add-blog-disabled" disabled>Adding ...</button>}
                 </form>
             </div>
             <div className="preview">
                 <div className="blog-content">
-                    <h1 className="blog-topic">{title}</h1>
+                    <h1 className="blog-topic">{topic}</h1>
                     <p className="blog-author">Written by {author}</p>
                     <hr/>
                     <div><p className="blog-body">{body}</p></div>

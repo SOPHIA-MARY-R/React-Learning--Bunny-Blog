@@ -17,20 +17,24 @@ import BlogList from "./components/BlogList";
 
 export default function Home(){
     const [blogs, setBlogs] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(()=>{
-        fetch('http://localhost:8000/blogs')
+        setTimeout(()=>{
+            fetch('http://localhost:8000/blogs')
             .then(res => {
                 return res.json();
             })
             .then((data)=>{
-                console.log(data);
-                setBlogs(data)
+                // console.log(data);
+                setBlogs(data);
+                setIsLoading(false);
             });
+        }, 1000) //set a timeout for 1s to show Loading ...
     }, [])
     return (
         <div className="home">
-            {blogs && <BlogList blogs={blogs} title="All blogs"/>}
-            {/* call BlogList only if blogs is not null */}
+            {isLoading ? <div>Loading ...</div> : (blogs && <BlogList blogs={blogs} title="All blogs"/>)}
+            {/* call BlogList only if blogs is not null*/}
         </div>
     );
 }
